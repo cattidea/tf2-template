@@ -1,0 +1,27 @@
+{
+  "name": "target-classification",
+  "docs": {
+    "docs_dir": "docs/",
+    "port": 8080
+  },
+  "image": {
+    "W": 96,
+    "H": 96
+  },
+  "train": {
+    "data_dir": "data/TrainSet",
+    "data_labels_file": "data/TrainSet/TrainSetLabels.csv"
+  },
+  "test": {
+    "data_dir": "data/TestSet",
+    "data_labels_file": "data/TestSet/TestSetLabels.csv"
+  },
+  "gpu": {
+    "enable": true,
+    "devices": [0],
+    "memory_fraction": 0.3
+  },
+  "margin": 0.2,
+  "seed": 1127,
+  "debug": true
+}
