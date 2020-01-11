@@ -118,9 +118,7 @@ class ImageProcessorFromPath(ImageProcessor):
             self.cache[img_path] = img
         return super().__call__(img)
 
-def read_and_resize(img_path, shape=(96, 96)):
-    img = cv2.cvtColor(cv2.imread(img_path), cv2.COLOR_BGR2RGB)
-    return cv2.resize(img, shape)
+
 
 
 # face = misc.face(gray=False)
