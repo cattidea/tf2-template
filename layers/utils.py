@@ -15,3 +15,11 @@ def get_custom_objects():
     for cls in CustomLayer.__subclasses__():
         custom_objects[cls.__name__] = cls
     return custom_objects
+
+class IdentityLayer(CustomLayer):
+
+    def __init__(self):
+        super().__init__()
+
+    def call(self, inputs):
+        return inputs

@@ -96,3 +96,33 @@ class AnonymousNetBlock(CustomLayer):
         if self.batch_norm:
             x = self.bn(x)
         return x
+
+
+def AnonymousNet():
+    return tf.keras.Sequential([
+        AnonymousNetBlock(16, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(16, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(32, strides=2, activation=True, batch_norm=True),
+        AnonymousNetBlock(32, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(32, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(64, strides=2, activation=True, batch_norm=True),
+        AnonymousNetBlock(64, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(64, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=2, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(128, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(256, strides=2, activation=True, batch_norm=True),
+        AnonymousNetBlock(256, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(256, strides=1, activation=True, batch_norm=True),
+        AnonymousNetBlock(512, strides=2, activation=True, batch_norm=True),
+    ])
