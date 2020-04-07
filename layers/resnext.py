@@ -82,3 +82,6 @@ def ResNeXt50():
 
 def ResNeXt101():
     return ResNeXt([3, 4, 23, 3])
+
+def ResNeXt152():
+    return ResNeXt([3, 8, 36, 3])
